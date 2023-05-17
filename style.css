@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  margin-top:70px;
   position: relative;
   height: 600vh;
   /* background: linear-gradient(to bottom, #e0e0e0 0%,#d3d3d3 93%, #000000 100%); */
