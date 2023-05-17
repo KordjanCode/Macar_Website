@@ -191,6 +191,7 @@ a {
 
 #home {
   background-color: whitesmoke;
+  
 }
 
 #about {
@@ -221,18 +222,20 @@ a {
 }
 
 .home-container {
-  padding-top: 0px;
+
+ 
   height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self:center;
 }
 
 .home-image-container img{
-  max-width: 40vw;
-  max-height: 40vw;
+  max-width: 40vh;
+  max-height: 40vh;
 
 }
 
