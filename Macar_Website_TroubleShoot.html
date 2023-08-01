@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  
+
+    #schedule{
+      padding-bottom: 10vh;
+      min-height: 60vh;
+    }  
+
+    #schedule h1 {
+      font-size: 36px;
+      margin-bottom: 5vh;
+    }
+
+    .schedule-table {
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+    }
+
+    .schedule-table thead th {
+      background-color: #f2f2f2;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .schedule-table tbody td {
+      padding: 10px;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    @media(max-width: 480px) {
+      .schedule-table {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+
+  <title>Macar_Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="/swiper-bundle.min.css"></script>
+  <script defer src="/app.js"></script>
+</head>
+<header id="header">
+  <div class="container">
+    <div class="subcontainer">
+
+      <nav class="navbar-container">
+
+        <div class="navbar-left">
+          <a href="#" class="nav-branding-1 logo hidden">MA<span>CAR</span></a>
+          <div class="nav-menu">
+            <a href="#" class="nav-branding-2 logo hidden">MA<span>CAR</span></a>
+            <a href="#about" class="nav-link logo hidden">Normy</a>
+            <a href="#photos" class="nav-link logo hidden">Realizacje</a>
+            <a href="#location" class="nav-link logo hidden">Lokalizacja</a>
+            <a href="#contact" class="nav-link logo hidden">Kontakt</a>
+            <!-- <a href="#schedule" class="nav-link logo hidden">Otwarcia</a> -->
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <button id="language-switch" class="lang-btn lang-btn-delay hidden">English</button>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<body>
+
+  <section id="home">
+    <div class="home-container">
+
+      <h1 class="hidden logo">Tarcza Ochronna Twojego Biznesu!</h1>
+      <div class="hidden logo home-image-container">
+        <img src="./img/logo_fire_shield.webp" fetchpriority="high" alt="FireShield 1">
+      </div>
+      <h2 class="hidden logo">Montaż systemów przeciwpożarowych, na którym możesz
+        polegać.</h2>
+     
+    </div>
+
+  </section>
+
+  <section id="about">
+      <img src="./img/macar.webp" fetchpriority="low" alt="Logo Main" class="main-logo logo hidden">
+      <div class="about-description-container">
+        <h3 class="logo hidden">  Specjaliści od niezawodnych tryskaczy przeciwpożarowych, które chronią Twój biznes.
+        </h3>
+        <h3 class="logo hidden">Nasze systemy posiadają najwyższe normy przeciwpożarowe zarówno Polskie, ustalane przez
+          Polski Komitet
+          Normalizacyjny (PKN), jak i Europejskie (VDS) oraz międzynarodowe (NFPA) gwarantując najwyższe standardy
+          bezpieczeństwa.</h3>
+        <h3 class="logo hidden">Wybierając Macar, inwestujesz w szybkość, rzetelność i profesjonalizm. Skontaktuj się z
+          nami i zadbaj o
+          bezpieczeństwo swojej firmy już dziś!</h3>
+      </div>
+      <div class="about-certificates-container">
+        <img src="./img/logo_vds.webp" fetchpriority="low" alt="Logo 1" class="logo hidden">
+        <img src="./img/logo_pkn.webp" fetchpriority="low" alt="Logo 2" class="logo hidden">
+        <img src="./img/logo_NFPA.webp" fetchpriority="low"  alt="Logo 3" class="logo hidden">
+      </div>
+  </section>
+
+  <section id="photos">
+
+    <div class="photo-section-headline hidden logo">
+      <h1>Realizacje</h1>
+    </div>
+    <div class="photos-container hidden logo">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./img/photos/photo_1.webp" fetchpriority="low" alt="Photo 1"></div>
+          <div class="swiper-slide"><img src="./img/photos/photo_2.webp" fetchpriority="low" alt="Photo 2"></div>
+          <div class="swiper-slide"><img src="./img/photos/photo_3.webp" fetchpriority="low" alt="Photo 3"></div>
+          <div class="swiper-slide"><img src="./img/photos/photo_4.webp" fetchpriority="low" alt="Photo 4"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="location">
+    <h1 class="hidden logo">Znajdź Nas!</h1>
+
+    <iframe class="google-map hidden logo"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.5144178124174!2d17.52294131580203!3d53.691279256519316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470247c9a2924e33%3A0x53d8ccd45442f033!2sTopole%2011%2C%2089-600%20Chojnice!5e0!3m2!1sen!2spl!4v1678659172594!5m2!1sen!2spl"
+      style="display:flex;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <h3 class="map-text">Zlokalizowani na pomorzu, realizujemy zlecenia w całej Polsce oraz Europie</h3>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1 class="logo hidden">Jak możemy pomóc?</h1>
+    <div class="contact-card logo hidden">
+      <div class="contact-info">
+        <img src="./img/photos/photo_1.webp" alt="Profile Photo">
+        <h4>Piotr</h4>
+        <p>Właściciel</p>
+        <p>Telefon: <a href="tel:+48 794 724 857">+48 794 724 857</a></p>
+        <p>Email: <a href="mailto:biuromacar@gmail.com">biuromacar@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="schedule">
+
+    <h1 class="logo hidden">Zapraszamy!</h1>
+    <table class="schedule-table logo hidden">
+      <thead>
+        <tr>
+          <th>Dzień Tygodnia</th>
+          <th>Godzina Otwarcia</th>
+          <th>Godzina Zamknięcia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Poniedziałek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Wtorek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Środa</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Czwartek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Piątek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Sobota</td>
+          <td>8:00</td>
+          <td>15:00</td>
+        </tr>
+        <tr>
+          <td>Niedziela</td>
+          <td>Zamknięte</td>
+          <td>Zamknięte</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+</body>
+<script src="script.js"></script>
+
+</html>
