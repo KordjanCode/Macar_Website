@@ -1,15 +1,14 @@
 ---
-import { Image } from "astro:assets";
-//import logo_fire_shield from "https://macar.blob.core.windows.net/images/logo_fire_shield.webp";
-const logo_fire_shield = "https://macar.blob.core.windows.net/images/logo_fire_shield.webp";
-const logo_macar = "https://macar.blob.core.windows.net/images/macar.webp";
-const logo_vds = "https://macar.blob.core.windows.net/images/logo_vds.webp";
-const logo_pkn = "https://macar.blob.core.windows.net/images/logo_pkn.webp";
-const logo_nfpa = "https://macar.blob.core.windows.net/images/logo_NFPA.webp";
-const photo_1 = "https://macar.blob.core.windows.net/images/photo_1.webp";
-const photo_2 = "https://macar.blob.core.windows.net/images/photo_2.webp";
-const photo_3 = "https://macar.blob.core.windows.net/images/photo_3.webp";
-const photo_4 = "https://macar.blob.core.windows.net/images/photo_4.webp";
+import { Image } from "astro:assets"; // Use the Image component for optimized image handling
+import logo_fire_shield from "../img/logo_fire_shield.webp";
+import logo_macar from "../img/macar.webp";
+import logo_vds from "../img/logo_vds.webp";
+import logo_pkn from "../img/logo_pkn.webp";
+import logo_nfpa from "../img/logo_nfpa.webp";
+import photo_1 from "../img/photos/photo_1.webp";
+import photo_2 from "../img/photos/photo_2.webp";
+import photo_3 from "../img/photos/photo_3.webp";
+import photo_4 from "../img/photos/photo_4.webp";
 ---
 
 <!doctype html>
@@ -27,6 +26,8 @@ const photo_4 = "https://macar.blob.core.windows.net/images/photo_4.webp";
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <script
+    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer is:inline></script>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <header id="header">
@@ -281,11 +282,7 @@ const photo_4 = "https://macar.blob.core.windows.net/images/photo_4.webp";
       </tbody>
     </table>
   </section>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
-    async></script>
-  <script async src="/scripts/app.js"></script>
-  <script async src="/scripts/script.js" defer></script>
+  <script src="/Macar_Website/scripts/app.js" defer is:inline></script>
+  <script src="/Macar_Website/scripts/script.js" defer is:inline></script>
 
 </html>
