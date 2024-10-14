@@ -2,11 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ Macar_Website ]  # Replace 'main' with your branch name if different
+    branches: [ macar-astro ]  # Replace 'main' with your branch name if different
   workflow_dispatch:
 
 permissions:
-  contents: read
   pages: write
   id-token: write
 
