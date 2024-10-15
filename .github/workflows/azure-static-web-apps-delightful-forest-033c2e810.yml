@@ -19,6 +19,8 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Clean Build Folder
+        run: rm -rf dist/
       - name: Install, build, and upload your site
         uses: withastro/action@v3
       - name: Build And Deploy
