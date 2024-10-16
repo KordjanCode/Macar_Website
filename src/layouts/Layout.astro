@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      rel="preconnect"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="subcontainer">
+          <nav class="navbar-container">
+            <div class="navbar-left">
+              <a href="#Main" class="nav-branding-1 logo hidden">MA<span>CAR</span></a>
+              <div class="nav-menu">
+                <a href="#Main" class="nav-branding-2 logo hidden">MA<span>CAR</span></a>
+                <a href="#about" class="nav-link logo hidden">Normy</a>
+                <a href="#photos" class="nav-link logo hidden">Realizacje</a>
+                <a href="#location" class="nav-link logo hidden">Lokalizacja</a>
+                <a href="#contact" class="nav-link logo hidden">Kontakt</a>
+              </div>
+            </div>
+            <div class="navbar-right">
+              <button id="language-switch" class="lang-btn lang-btn-delay hidden">English</button>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+     FOOTER
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer is:inline></script>
+    <script src="/scripts/app.js" defer is:inline></script>
+    <script src="/scripts/script.js" defer is:inline></script>
+  </body>
+</html>

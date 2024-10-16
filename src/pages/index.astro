@@ -1,0 +1,264 @@
+---
+//LAYOUT
+
+import Layout from "../layouts/Layout.astro";
+const title = "Macar - Najlepszy montaż instalacji PPOŻ";
+
+// IMAGES
+
+import { Image } from "astro:assets"; // Use the Image component for optimized image handling
+import logo_fire_shield from "../img/logo_fire_shield.webp";
+import logo_macar from "../img/macar.webp";
+import logo_vds from "../img/logo_vds.webp";
+import logo_pkn from "../img/logo_pkn.webp";
+import logo_nfpa from "../img/logo_NFPA.png";
+import photo_1 from "../img/photos/photo_1.webp";
+import photo_2 from "../img/photos/photo_2.webp";
+import photo_3 from "../img/photos/photo_3.webp";
+import photo_4 from "../img/photos/photo_4.webp";
+
+//PAGES
+
+// import LinkCard from "../components/Card.astro";
+---
+<head>
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://maps.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<Layout title={title}>
+  <section id="home">
+    <div class="home-container">
+      <h1 class="hidden logo">Tarcza Ochronna Twojego Biznesu!</h1>
+      <div class="hidden logo home-image-container">
+        <Image
+          src={logo_fire_shield}
+          alt="Fire Shield Logo"
+          loading="eager"
+          width={233}
+          height={233}
+          class="image-class"
+        />
+      </div>
+      <h2 class="hidden logo">
+        Montaż systemów przeciwpożarowych, na którym możesz polegać.
+      </h2>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="hidden logo logo-image-container">
+      <Image
+        src={logo_macar}
+        alt="Logo Macar"
+        loading="lazy"
+        class="main-logo"
+        width={500}
+        height={171}
+        class="image-class"
+      />
+    </div>
+    <div class="about-description-container">
+      <h3 class="logo hidden">
+        Specjaliści od niezawodnych tryskaczy przeciwpożarowych, które chronią
+        Twój biznes.
+      </h3>
+      <h3 class="logo hidden">
+        Nasze systemy spełniają najwyższe normy przeciwpożarowe zarówno Polskie,
+        ustalane przez Polski Komitet Normalizacyjny (PKN), jak i Europejskie
+        (VDS) oraz międzynarodowe (NFPA) gwarantując najwyższe standardy
+        bezpieczeństwa.
+      </h3>
+      <h3 class="logo hidden">
+        Wybierając Macar, inwestujesz w szybkość, rzetelność i profesjonalizm.
+        Skontaktuj się z nami i zadbaj o bezpieczeństwo swojej firmy już dziś!
+      </h3>
+    </div>
+    <div class="about-certificates-container">
+      <Image
+        src={logo_vds}
+        alt="Logo VDS"
+        loading="lazy"
+        class="logo hidden image-class"
+        width={225}
+        height={225}
+      />
+      <Image
+        src={logo_pkn}
+        alt="Logo PKN"
+        loading="lazy"
+        class="logo hidden image-class"
+        width={971}
+        height={638}
+      />
+      <Image
+        src={logo_nfpa}
+        alt="Logo NFPA"
+        loading="lazy"
+        class="logo hidden image-class"
+        width={1200}
+        height={1362}
+      />
+    </div>
+  </section>
+  <!--
+  <section>
+    <ul>
+      <LinkCard
+        title="Example Title 1"
+        body="This is a brief description."
+        href="/example-link-1"
+      />
+      <LinkCard
+        title="Example Title 2"
+        body="This is another brief description."
+        href="/example-link-2"
+      />
+      <LinkCard
+        title="Example Title 3"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        href="/example-link-3"
+      />
+    </ul>
+  </section>
+-->
+  <section id="photos">
+    <div class="photo-section-headline hidden logo">
+      <h1>Realizacje</h1>
+    </div>
+    <div class="photos-container hidden logo">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <Image
+              src={photo_1}
+              loading="lazy"
+              alt="Rury na Suficie"
+              width={1360}
+              height={1020}
+            />
+          </div>
+          <div class="swiper-slide">
+            <Image
+              src={photo_2}
+              loading="lazy"
+              alt="System Orurowania"
+              width={1360}
+              height={1020}
+            />
+          </div>
+          <div class="swiper-slide">
+            <Image
+              src={photo_3}
+              loading="lazy"
+              alt="System"
+              width={1360}
+              height={1020}
+            />
+          </div>
+          <div class="swiper-slide">
+            <Image
+              src={photo_4}
+              loading="lazy"
+              alt="System rur"
+              width={1360}
+              height={1020}
+            />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h1 class="hidden logo">Znajdź Nas!</h1>
+
+    <iframe
+      class="google-map hidden logo"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.5144178124174!2d17.52294131580203!3d53.691279256519316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470247c9a2924e33%3A0x53d8ccd45442f033!2sTopole%2011%2C%2089-600%20Chojnice!5e0!3m2!1sen!2spl!4v1678659172594!5m2!1sen!2spl"
+      style="display:flex;"
+      allowfullscreen=""
+      title="Mapa Google Lokalizacja"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+    <h3 class="map-text">
+      Zlokalizowani na pomorzu, realizujemy zlecenia w całej Polsce oraz Europie
+    </h3>
+  </section>
+
+  <section id="contact">
+    <h1 class="logo hidden">Jak możemy pomóc?</h1>
+    <div class="contact-card logo hidden">
+      <div class="contact-info">
+        <Image
+          src={photo_1}
+          alt="Profile"
+          class="image-class"
+          width={1360}
+          height={1020}
+        />
+        <h4>Piotr</h4>
+        <p>Właściciel</p>
+        <p>Telefon: <a href="tel:+48 794 724 857">+48 794 724 857</a></p>
+        <p>
+          Email: <a href="mailto:biuromacar@gmail.com">biuromacar@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h1 class="logo hidden">Zapraszamy!</h1>
+    <table class="schedule-table logo hidden">
+      <thead>
+        <tr>
+          <th>Dzień Tygodnia</th>
+          <th>Godzina Otwarcia</th>
+          <th>Godzina Zamknięcia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Poniedziałek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Wtorek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Środa</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Czwartek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Piątek</td>
+          <td>8:00</td>
+          <td>18:00</td>
+        </tr>
+        <tr>
+          <td>Sobota</td>
+          <td>8:00</td>
+          <td>15:00</td>
+        </tr>
+        <tr>
+          <td>Niedziela</td>
+          <td>Zamknięte</td>
+          <td>Zamknięte</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</Layout>
