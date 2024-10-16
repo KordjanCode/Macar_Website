@@ -1,50 +1,63 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
----
 
-<!doctype html>
+---
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="subcontainer">
+          <nav class="navbar-container">
+            <div class="navbar-left">
+              <a href="#Main" class="nav-branding-1 logo hidden">MA<span>CAR</span></a>
+              <div class="nav-menu">
+                <a href="#Main" class="nav-branding-2 logo hidden">MA<span>CAR</span></a>
+                <a href="#about" class="nav-link logo hidden">Normy</a>
+                <a href="#photos" class="nav-link logo hidden">Realizacje</a>
+                <a href="#location" class="nav-link logo hidden">Lokalizacja</a>
+                <a href="#contact" class="nav-link logo hidden">Kontakt</a>
+              </div>
+            </div>
+            <div class="navbar-right">
+              <button id="language-switch" class="lang-btn lang-btn-delay hidden">English</button>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+     FOOTER
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer is:inline></script>
+    <script src="/scripts/app.js" defer is:inline></script>
+    <script src="/scripts/script.js" defer is:inline></script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
