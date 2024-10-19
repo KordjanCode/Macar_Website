@@ -2,9 +2,8 @@
 interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
-
+import favicon from '../img/favicon_macar.png';
 ---
 <html lang="en">
   <head>
@@ -17,7 +16,7 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
     />
     <title>{title}</title>
-    <link rel="icon" href='src/img/favicon_macar.png' type="image/png">
+    <link rel="icon" href={ favicon.src } type="image/png">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
