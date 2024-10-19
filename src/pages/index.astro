@@ -1,4 +1,8 @@
 ---
+// Import Tailwind
+// import '@/styles/style.css'
+
+
 //LAYOUT
 
 import Layout from "../layouts/Layout.astro";
@@ -28,8 +32,10 @@ import photo_4 from "../img/photos/photo_4.webp";
 </head>
 <Layout title={title}>
   <section id="home">
+  
     <div class="home-container">
       <h1 class="hidden logo">Tarcza Ochronna Twojego Biznesu!</h1>
+      
       <div class="hidden logo home-image-container">
         <Image
           src={logo_fire_shield}
@@ -41,7 +47,10 @@ import photo_4 from "../img/photos/photo_4.webp";
         />
       </div>
       <h2 class="hidden logo">
-        Montaż systemów przeciwpożarowych, na którym możesz polegać.
+        Założona w 2020 roku firma Macar jest instalatorem systemów tryskaczowych. Oferujemy obecjnie pełne spektrum produktów i usług z zakresu aktywnej ochrony przeciwpożarowej na różnych rynkach i w różnych krajach.
+      </h2>
+      <h2 class="hidden logo">
+        Dzięki regionalnemu zakotwiczeniu, Macar obecnie obsługuje Niemcy, Holandię, Belgię i Polskę z kilku lokalizacji blisko naszych klientów. Nasza strategia zakłada dalsze rozwijanie tego podejścia, poprzez tworzenie regionalnych centrów w innych krajach, w których prowadzimy działalność.
       </h2>
     </div>
   </section>
@@ -186,7 +195,7 @@ import photo_4 from "../img/photos/photo_4.webp";
       referrerpolicy="no-referrer-when-downgrade"
     >
     </iframe>
-    <h3 class="map-text logo hidden">
+    <h3 class="map-text logo">
       Zlokalizowani na pomorzu, realizujemy zlecenia w całej Polsce oraz Europie
     </h3>
   </section>

@@ -1,9 +1,17 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "astro",
-    "types": ["astro/astro-jsx"],
-    "moduleResolution": "node"
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "types": [
+      "astro/astro-jsx"
+    ],
+    "moduleResolution": "node",
+    "baseUrl":".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   }
 }
