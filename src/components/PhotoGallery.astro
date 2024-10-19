@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+
+// TypeScript interface for Photo
+interface Photo {
+  src: any; // Using `any` because Astro will infer the type when the image is imported
+  alt: string;
+}
+
+interface Props {
+  photos: Photo[];
+  title?: string;
+}
+
+// Props destructuring with a default title
+const { photos, title = 'Realizacje' } = Astro.props as Props;
+
+// Declare Swiper as a global variable for TypeScript
+declare let Swiper: any;
+
+// JavaScript code for initializing Swiper
+const initSwiper = () => {
+  if (typeof Swiper !== 'undefined') {
+    new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      grabCursor: true,
+      touchRatio: 1,
+      simulateTouch: true,
+    });
+  }
+};
+---
+
+<section id="photos">
+  <div class="photo-section-headline hidden logo">
+    <h1>{title}</h1>
+  </div>
+  <div class="photos-container hidden logo">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        {photos.map((photo: Photo) => (
+          <div class="swiper-slide">
+            <Image
+              src={photo.src}
+              loading="lazy"
+              alt={photo.alt}
+              width={1360}
+              height={1020}
+            />
+          </div>
+        ))}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper from CDN -->
+<script
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+  defer
+  is:inline></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', initSwiper);
+</script>

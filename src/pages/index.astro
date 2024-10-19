@@ -23,6 +23,16 @@ import photo_4 from "../img/photos/photo_4.webp";
 
 //PAGES
 
+//GALERIA PHOTO COMPONENT
+import PhotoGallery from '../components/PhotoGallery.astro'; // Adjust the path based on your file structure
+
+const photos = [
+  { src: photo_1, alt: 'Rury na Suficie' },
+  { src: photo_2, alt: 'System Orurowania' },
+  { src: photo_3, alt: 'System' },
+  { src: photo_4, alt: 'System rur' },
+];
+
 // import LinkCard from "../components/Card.astro";
 ---
 <head>
@@ -131,8 +141,10 @@ import photo_4 from "../img/photos/photo_4.webp";
     </ul>
   </section>
 -->
+  
   <section id="photos">
-    <div class="photo-section-headline hidden logo">
+    <PhotoGallery photos={photos} title="Realizacje" />
+    <!-- <div class="photo-section-headline hidden logo">
       <h1>Realizacje</h1>
     </div>
     <div class="photos-container hidden logo">
@@ -179,7 +191,7 @@ import photo_4 from "../img/photos/photo_4.webp";
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <section id="location">
